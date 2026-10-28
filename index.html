@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>하우투약 · 정보보호 관리체계</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+<header class="hero">
+  <div class="topline"><div class="brand">HOWTOYAK · SECURITY GOVERNANCE</div><div class="status">IOS 27001 DOCUMENT MAP / 2026</div></div>
+  <h1>정보보호 관리체계<br>문서 아키텍처</h1>
+  <p>정책에서 실무 지침, 운영 기록과 경영검토까지.<br>하우투약의 정보보호 문서를 한눈에 탐색하는 통합 문서 맵입니다.</p>
+  <div class="hero-meta"><span>01 / 자산·리스크</span><span>02 / 보안 지침</span><span>03 / 운영 증적</span><span>04 / 경영 검토</span></div>
+  <div class="hero-actions">
+    <a class="hero-btn" href="https://drive.google.com/drive/u/0/folders/101I2_rFgSVw1ZE3a9H3fHQtP7sV2_hk-" target="_blank" rel="noopener noreferrer">구글 드라이브 바로가기</a>
+    <button type="button" class="hero-btn hero-btn-ghost" id="open-flow">문서 구조 이미지 보기</button>
+  </div>
+</header>
+<dialog id="flow-modal" class="flow-modal" aria-label="문서 간 연결 구조">
+  <form method="dialog" class="flow-modal-bar">
+    <span>문서 간 연결 구조</span>
+    <button type="submit" class="flow-modal-close" aria-label="닫기">닫기</button>
+  </form>
+  <img src="images/flow.png" alt="문서 간 연결 구조">
+</dialog>
+<main>
+  <section class="stats" aria-label="문서 요약">
+    <div class="stat"><small>전체 문서</small><strong>20</strong><span>정책 · 지침 · 대장 · 절차서</span></div>
+    <div class="stat"><small>문서 유형</small><strong>5 <span style="font-size:12px">TYPES</span></strong><span>POL / GDL / PRO / REG / RSK·SOA·MRV</span></div>
+    <div class="stat"><small>관리 범위</small><strong>2</strong><span>전사 공통 · BRIC 서비스</span></div>
+    <div class="stat"><small>확정 필요</small><strong>범위·담당</strong><span>일부 문서의 적용 범위 및 작성 담당</span></div>
+  </section>
+
+  <div class="section-head">
+    <div><div class="eyebrow">Document library</div><h2>문서 라이브러리</h2><div class="sub">문서 코드를 선택해 체계를 살펴보세요. 검색과 범주 필터를 지원합니다.</div></div>
+    <div class="tools"><input id="search" class="search" type="search" placeholder="문서명·코드 검색…" aria-label="문서 검색"><button class="filter active" data-filter="all">전체</button><button class="filter" data-filter="core">자산·리스크</button><button class="filter" data-filter="guides">보안 지침</button><button class="filter" data-filter="records">운영 대장</button></div>
+  </div>
+
+  <section class="group" data-group="core">
+    <h3 class="group-title"><span class="num">01</span> 자산 및 리스크 <span class="kind">FOUNDATION</span></h3>
+    <div class="cards">
+      <a class="doc" href="https://docs.google.com/spreadsheets/d/1X6lzZh2owr3OUIna0s-11hGeS1EgsG6z2JGVeA9mp7Q/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="core" data-search="SOA-01 적용선언서 적용성 선언 부속서 통제항목">
+        <div class="doc-top"><span class="code">SOA-01</span><span class="badge draft">범위 미정</span></div><h3>적용선언서</h3><p>ISO 27001 부속서 통제 항목을 나열하고 적용 여부와 적용 근거를 기록합니다.</p><div class="doc-foot"><span class="scope">전사 · 범위 미정</span><span class="ext">XLSX · 단일 시트</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/spreadsheets/d/1dKnQMEcqZx5ywWRGb0ZY_uPMmG3527Fw1TFHmqDFF-Q/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="core" data-search="RSK-01 위험요소평가표 위험평가 위험처리계획 회의 결정 BRIC">
+        <div class="doc-top"><span class="code">RSK-01</span><span class="badge ready">운영 기준</span></div><h3>위험요소평가표</h3><p>BRIC 위협 시나리오를 평가하고 위험처리 방안과 회의 결정 사항을 관리합니다.</p><div class="doc-foot"><span class="scope">전사 기준 · BRIC 평가</span><span class="ext">XLSX · 4개 시트</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/spreadsheets/d/1dKnQMEcqZx5ywWRGb0ZY_uPMmG3527Fw1TFHmqDFF-Q/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="core" data-search="REG-01 정보자산대장 자산 목록 HW SW 서비스 시설 정보">
+        <div class="doc-top"><span class="code">REG-01</span><span class="badge ready">기초 대장</span></div><h3>정보자산대장</h3><p>HW·SW·서비스·시설·정보 분류에 따라 자산 목록과 정기점검 결과를 관리합니다.</p><div class="doc-foot"><span class="scope">전사 · 범위 미정</span><span class="ext">XLSX · 3개 시트</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="group" data-group="guides">
+    <h3 class="group-title"><span class="num">02</span> 기본 방침 및 보안 실무 지침 <span class="kind">POLICY & CONTROLS</span></h3>
+    <div class="cards">
+      <a class="doc" href="https://docs.google.com/document/d/1gujacK5TnFwlhm-DH0hjAUt2iFCIBsOVkU127jXDaSw/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="guides" data-search="POL-01 정보보호 정책서 기획팀">
+        <div class="doc-top"><span class="code">POL-01</span><span class="badge draft">작성 예정</span></div><h3>정보보호 정책서</h3><p>전사 정보보호의 기본 원칙과 책임, 운영 방향을 정의하는 상위 정책 문서입니다.</p><div class="doc-foot"><span class="scope">전사 · 범위 미정</span><span class="ext">DOCS</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/document/d/1kmDOqA1F9MW-ebEMu65WVGf-eR3V1wHvPy-TAZ1lKaY/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="guides" data-search="GDL-01 인프라 네트워크 보안 계정 접근권한 암호화 변경관리 REG-04">
+        <div class="doc-top"><span class="code">GDL-01</span><span class="badge ready">핵심 지침</span></div><h3>인프라 및 네트워크 보안 지침서</h3><p>클라우드·네트워크·SaaS 계정, 권한, 암호화, 구성 변경과 개인정보 파기 기준.</p><div class="doc-foot"><span class="scope">전사 · 범위 미정</span><span class="ext">DOCS</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/document/d/1W1jnaBjA5gZFS684l3ltu1gQbDbl8ntrvC6jgl_bPD4/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="guides" data-search="GDL-02 모니터링 장애 대응 BRIC S3 DB 서버 복구 PRO-01 PRO-02 PRO-03">
+        <div class="doc-top"><span class="code">GDL-02</span><span class="badge ready">핵심 지침</span></div><h3>모니터링 및 장애 대응 지침서</h3><p>BRIC 데이터와 서버의 모니터링, 장애 탐지·대응·복구 및 사후 처리 기준.</p><div class="doc-foot"><span class="scope">BRIC</span><span class="ext">DOCS</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/document/d/1fAnRmfFiQeGz4MyKdcg2hK-OS-VF3Wk04GypHA2I5F8/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="guides" data-search="GDL-03 보안 개발 지침 기획 설계 구현 테스트 리뷰 배포">
+        <div class="doc-top"><span class="code">GDL-03</span><span class="badge ready">개발 보안</span></div><h3>보안 개발 지침서</h3><p>기획·설계·구현·테스트·리뷰 및 배포 단계별 보안 요구사항과 실행 기준.</p><div class="doc-foot"><span class="scope">BRIC</span><span class="ext">DOCS</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/document/d/1912Ufx77Zgf7EOa6iv1Ab4ltJ5VauoLITAp0xU_nnAY/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="guides" data-search="GDL-04 인적 물리보안 채용 교육 장비 입퇴사 REG-02 REG-03">
+        <div class="doc-top"><span class="code">GDL-04</span><span class="badge ready">인적·물리</span></div><h3>인적 및 물리보안 지침서</h3><p>채용·입퇴사, 보안서약·교육, 물리적 접근과 단말 및 장비 관리 기준.</p><div class="doc-foot"><span class="scope">전사 · 범위 미정</span><span class="ext">DOCS</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/document/d/1-T-ABYSzJ_VH32eXFmgNHmR6qfx4h2GOA8O0_xOPmps/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="guides" data-search="GDL-05 공급업체 사고관리 보안사고 증거 보존 REG-06 REG-07">
+        <div class="doc-top"><span class="code">GDL-05</span><span class="badge draft">범위 확인</span></div><h3>공급업체 및 사고관리 지침서</h3><p>외부 공급업체 관리와 보안사고 보고·대응·종결·사후 검토 및 증거 보존.</p><div class="doc-foot"><span class="scope">BRIC · 범위 미정</span><span class="ext">DOCS</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="group" data-group="records">
+    <h3 class="group-title"><span class="num">03</span> 운영 대장 및 복구 절차 <span class="kind">OPERATIONAL EVIDENCE</span></h3>
+    <div class="cards">
+      <a class="doc" href="https://docs.google.com/spreadsheets/d/1s4EBXn_kk6aJgs200i5fUEG27agD1AZgRcqnUM_jM2o/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="records" data-search="REG-04 계정 관리 대장 계정 이력 정기점검 GDL-01">
+        <div class="doc-top"><span class="code">REG-04</span><span class="badge ready">운영 대장</span></div><h3>계정 관리 대장</h3><p>계정 현황·변경 이력과 정기점검을 기록해 접근권한 관리의 증적을 남깁니다.</p><div class="doc-foot"><span class="scope">전사 · 범위 미정</span><span class="ext">XLSX · 4개 시트</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/document/d/1foP7eAIIOFgWofzgMWdT5h6HKNgCOIGwdjGTdy4bLCM/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="records" data-search="PRO-01 DB 데이터베이스 백업 복구 GDL-02">
+        <div class="doc-top"><span class="code">PRO-01</span><span class="badge ready">절차서</span></div><h3>DB 백업 및 복구 절차서</h3><p>GDL-02 제9조를 바탕으로 데이터베이스 장애 시 백업 확인과 복구를 수행합니다.</p><div class="doc-foot"><span class="scope">BRIC</span><span class="ext">DOCS</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/document/d/13ICk6VBx-jMp_KMKiYkRXfKRDwRph6bqgzrQDMQpV0I/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="records" data-search="PRO-02 S3 서비스 버킷 백업 복구 GDL-02">
+        <div class="doc-top"><span class="code">PRO-02</span><span class="badge ready">절차서</span></div><h3>S3 서비스 버킷 백업 절차서</h3><p>BRIC S3 버킷 장애에 대비한 백업 확인, 복구 실행과 결과 확인 절차.</p><div class="doc-foot"><span class="scope">BRIC</span><span class="ext">DOCS</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/document/d/1thXpp_wjZ-7R3vRRK68wtSq_3swvxyMNxFau9unyXKY/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="records" data-search="PRO-03 서버 장애 복구 절차 다운 장애 GDL-02">
+        <div class="doc-top"><span class="code">PRO-03</span><span class="badge ready">절차서</span></div><h3>서버 장애 복구 절차서</h3><p>서버 다운 장애 시나리오 5가지를 기준으로 진단·조치·복구 방법을 정리합니다.</p><div class="doc-foot"><span class="scope">BRIC</span><span class="ext">DOCS</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/spreadsheets/d/1x3DRbVqXorGv5RV919IB-8oKZQRGhdQunuUflHQ9yh4/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="records" data-search="REG-05 서비스 장애 대응 일지 모의 복구 훈련">
+        <div class="doc-top"><span class="code">REG-05</span><span class="badge ready">운영 기록</span></div><h3>서비스 장애 대응 일지</h3><p>장애 발생·인지·조치·복구 시간과 모의 복구 훈련 결과를 기록합니다.</p><div class="doc-foot"><span class="scope">BRIC</span><span class="ext">XLSX · 단일 시트</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/spreadsheets/d/1zfc2gEeNqGEO5egXvprn62b5T20Ip6MIVQFgCJHLsFA/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="records" data-search="REG-02 물리보안 장비 관리 대장 장비 이력 정기점검 단말">
+        <div class="doc-top"><span class="code">REG-02</span><span class="badge ready">운영 대장</span></div><h3>물리보안 및 장비 관리 대장</h3><p>장비 이력, 정기점검 및 단말 점검 내역을 추적해 장비 보안 상태를 관리합니다.</p><div class="doc-foot"><span class="scope">전사 · 범위 미정</span><span class="ext">XLSX · 3개 시트</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/spreadsheets/d/1gEMcp7bsSoIJIG8j4Senle9S_HtCV1ECEF9aVw_MD-g/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="records" data-search="REG-03 인적보안 관리 대장 보안서약 교육 입퇴사">
+        <div class="doc-top"><span class="code">REG-03</span><span class="badge ready">운영 대장</span></div><h3>인적보안 관리 대장</h3><p>보안서약, 보안교육 이수와 입·퇴사자별 보안 조치 이력을 기록합니다.</p><div class="doc-foot"><span class="scope">전사 · 범위 미정</span><span class="ext">XLSX · 3개 시트</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/spreadsheets/d/1GNZR2Tjz9JsOX01OAW4S7bAwjQBGswFvfnl09STLjWM/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="records" data-search="REG-06 공급업체 관리 대장 목록 정기점검 도입 해지">
+        <div class="doc-top"><span class="code">REG-06</span><span class="badge ready">운영 대장</span></div><h3>공급업체 관리 대장</h3><p>공급업체 목록과 정기점검, 도입·해지 이력을 관리합니다.</p><div class="doc-foot"><span class="scope">BRIC · 범위 미정</span><span class="ext">XLSX · 3개 시트</span></div>
+      </a>
+      <a class="doc" href="https://docs.google.com/spreadsheets/d/1qfBHgxJXZGSkoNNm33aTHlR3BCf361gVvA8CDmvfB9Y/edit?usp=drive_link" target="_blank" rel="noopener noreferrer" data-cat="records" data-search="REG-07 보안사고 관리 대장 사고 목록 대비 점검">
+        <div class="doc-top"><span class="code">REG-07</span><span class="badge draft">템플릿</span></div><h3>보안사고 관리 대장</h3><p>사고 목록과 사고 대비 점검을 관리합니다. 현재 사고 발생 전 템플릿 상태입니다.</p><div class="doc-foot"><span class="scope">BRIC · 범위 미정</span><span class="ext">XLSX · 2개 시트</span></div>
+      </a>
+      <a class="doc" href="https://drive.google.com/drive/u/0/folders/1m959-DJTBHVoDj3GQY6kUfif7CkI0i_n" target="_blank" rel="noopener noreferrer" data-cat="records" data-search="EVD 비밀 유지 서약서 정보보호 교육 서명부 증거 자료 기록부">
+        <div class="doc-top"><span class="code">EVD</span><span class="badge draft">증적 자료</span></div><h3>비밀유지 서약서 · 교육 서명부</h3><p>보안 준수 서약과 정보보호 교육 참여 여부를 증빙하는 기록 자료 모음.</p><div class="doc-foot"><span class="scope">전사 · 범위 미정</span><span class="ext">문서·기록</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="group" data-group="core">
+    <h3 class="group-title"><span class="num">04</span> 점검 및 경영 검토 <span class="kind">ASSURANCE</span></h3>
+    <div class="cards">
+      <a class="doc" href="#" target="_blank" rel="noopener noreferrer" data-cat="core" data-search="MRV-01 경영검토 회의록 기획팀">
+        <div class="doc-top"><span class="code">MRV-01</span><span class="badge draft">작성 예정</span></div><h3>경영검토 및 회의록</h3><p>정보보호 목표·위험·점검 결과와 개선 과제를 경영진이 검토하고 결정 사항을 남깁니다.</p><div class="doc-foot"><span class="scope">범위·담당 미정</span><span class="ext">DOCS</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="section-head"><div><div class="eyebrow">Management system flow</div><h2>문서 간 연결 구조</h2><div class="sub">상위 기준이 실행 절차를 만들고, 운영 증적이 위험평가와 경영검토로 환류됩니다.</div></div></div>
+  <section class="flow">
+    <div class="flow-item"><div class="step">01 / DEFINE</div><b>정책·적용 범위</b><p>POL-01 정보보호 정책<br>SOA-01 적용선언서</p></div>
+    <div class="flow-item"><div class="step">02 / ASSESS</div><b>자산·위험 평가</b><p>REG-01 자산대장<br>RSK-01 위험요소평가</p></div>
+    <div class="flow-item"><div class="step">03 / OPERATE</div><b>통제·운영·증적</b><p>GDL-01~05 지침<br>PRO-01~03 절차 · REG 대장</p></div>
+    <div class="flow-item"><div class="step">04 / IMPROVE</div><b>점검·경영검토</b><p>AUD 점검 영역<br>MRV-01 검토 및 개선 결정</p></div>
+  </section>
+
+  <div class="notice"><div class="symbol">i</div><div><b>정리 및 확정이 필요한 항목</b><p>① 전사 공통과 BRIC 적용 범위 확정 ② 문서 소유자·승인자 지정 ③ 파일 확장자 표기 통일(.xlsx, .docx 권장) ④ AUD의 공식 명칭과 산출물 정의 ⑤ ISO/IEC 27001 적용 판본 및 부속서 통제 항목 확인. 이 화면은 제공된 목록을 바탕으로 만든 문서 맵이며, 인증 적합성을 보증하는 체크리스트는 아닙니다.</p></div></div>
+  <footer><span>HOWTOYAK · INFORMATION SECURITY MANAGEMENT</span><span>DOCUMENT MAP / 내부 검토용 초안</span></footer>
+  <div id="empty" class="empty">검색 결과가 없습니다. 다른 코드나 문서명을 입력해 보세요.</div>
+</main>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
