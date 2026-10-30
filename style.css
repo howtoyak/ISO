@@ -221,6 +221,8 @@ main {
   border: 1px solid #e8e4df;
   border-radius: calc(14px * var(--site-radius-scale));
   padding: 18px;
+  text-decoration: none;
+  color: inherit;
 }
 .stat small {
   color: #7a736c;
